@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Idul Fitri</title>
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Menggunakan Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    },
+                    colors: {
+                        'eid-green': '#0f4c3a',
+                        'eid-gold': '#d4af37',
+                        'dana-blue': '#118EEA',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Background pattern bulan bintang tipis */
+            background-color: #0f4c3a;
+            background-image: radial-gradient(#15604a 1px, transparent 1px);
+            background-size: 20px 20px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 flex items-center justify-center p-4">
+
+    <!-- Container Utama (Maksimal lebar untuk ukuran HP) -->
+    <main class="w-full max-w-sm bg-white rounded-3xl card-shadow overflow-hidden relative opacity-0 animate-fade-in-up">
+        
+        <!-- Ornamen Atas -->
+        <div class="h-32 bg-gradient-to-b from-eid-green to-[#15604a] relative flex justify-center rounded-b-[40px] shadow-sm">
+            <!-- SVG Lentera / Masjid dekorasi -->
+            <svg class="absolute -bottom-10 w-24 h-24 text-eid-gold animate-bounce-slow" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.69 2 6 4.69 6 8C6 9.38 6.47 10.65 7.26 11.66L10.5 16.5C10.82 16.97 11.38 17.25 12 17.25C12.62 17.25 13.18 16.97 13.5 16.5L16.74 11.66C17.53 10.65 18 9.38 18 8C18 4.69 15.31 2 12 2ZM12 4C14.21 4 16 5.79 16 8C16 8.9 15.69 9.75 15.14 10.42L12 15.11L8.86 10.42C8.31 9.75 8 8.9 8 8C8 5.79 9.79 4 12 4ZM11 18H13V22H11V18Z"/>
+                <!-- Bintang -->
+                <circle cx="12" cy="8" r="1.5" fill="#fff" />
+            </svg>
+            
+            <!-- Ornamen ketupat kiri kanan -->
+            <div class="absolute left-4 top-4 opacity-50">
+                 <svg class="w-8 h-8 text-eid-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4l-8 8 8 8 8-8-8-8z"></path></svg>
+            </div>
+            <div class="absolute right-4 top-4 opacity-50">
+                 <svg class="w-8 h-8 text-eid-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4l-8 8 8 8 8-8-8-8z"></path></svg>
+            </div>
+        </div>
+
+        <!-- Konten Utama -->
+        <div class="px-6 pt-16 pb-8 text-center">
+            
+            <h1 class="text-3xl font-arabic text-eid-green font-bold mb-2">
+                عيد الفطر المبارك
+            </h1>
+            <h2 class="text-xl font-bold text-gray-800 mb-1">
+                Selamat Hari Raya Idul Fitri
+            </h2>
+            <p class="text-sm text-eid-gold font-semibold mb-6">
+                1 Syawal 1447 H
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-5 mb-6 border border-gray-100">
+                <p class="text-gray-600 text-sm leading-relaxed italic mb-3">
+                    "Taqabbalallahu minna wa minkum, shiyamana wa shiyamakum."
+                </p>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                    Minal 'Aidin wal-Faizin.<br>
+                    Mohon maaf lahir dan batin atas segala khilaf dan salah. Semoga Allah menerima amal ibadah kita semua.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <p class="text-xs text-gray-500 mb-2">Salam hangat dari,</p>
+                <p class="font-semibold text-eid-green">Player MCGG Terbaik Kedua</p>
+            </div>
+
+            <!-- GARIS PEMISAH -->
+            <hr class="border-t border-gray-200 my-6">
+
+            <!-- BAGIAN DANA KAGET -->
+            <div class="space-y-3">
+                <p class="text-sm font-medium text-gray-700 flex items-center justify-center gap-2">
+                    <span class="text-xl"></span> Ada kejutan untukmu!
+                </p>
+                
+                <!-- 
+                ========================================================================
+                LINK DANA KAGET: 
+                Ganti tanda pagar (#) pada atribut href di bawah dengan link Dana Kaget Anda.
+                Contoh: href="https://link.dana.id/kaget?c=xxxxx"
+                ========================================================================
+                -->
+                <a href="https://link.dana.id/danakaget?c=ssj9gtnqd&r=bIidQM&orderId=20260320101214105515010300166544170074826" target="_blank" rel="noopener noreferrer" 
+                   class="relative inline-flex items-center justify-center w-full px-6 py-4 overflow-hidden font-bold text-white bg-dana-blue rounded-xl hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/30 group animate-pulse-slow">
+                    
+                    <!-- Icon Dompet/Uang -->
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    
+                    
+                    <!-- Efek kilap saat di-hover -->
+                    <div class="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                </a>
+                <p class="text-[10px] text-gray-400 mt-2">
+                    *Klik tombol di atas.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
